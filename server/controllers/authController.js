@@ -57,24 +57,35 @@ const registerUser = async (req, res) => {
 const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
+    
+    console.log("👉 Login Attempt for:", email); // Debug Log 1
 
+    // Explicitly ask for the password using .select('+password')
     const user = await User.findOne({ email }).select('+password');
 
+    if (!user) {
+      console.log("❌ User not found in DB"); // Debug Log 2
+      return res.status(400).json({ message: 'Invalid credentials (User not found)' });
+    }
+
+    console.log("✅ User found:", user.name);
+    console.log("🔑 Password field exists?", user.password ? "YES" : "NO (Undefined!)"); // Debug Log 3
+
     if (user && (await bcrypt.compare(password, user.password))) {
+      console.log("🔓 Password Match! Logging in...");
       res.json({
         _id: user.id,
         name: user.name,
         email: user.email,
         role: user.role,
-        isVerified: user.isVerified,
-        licenseNumber: user.licenseNumber,
         token: generateToken(user.id)
       });
     } else {
-      res.status(400).json({ message: 'Invalid credentials' });
+      console.log("⛔ Password mismatch"); // Debug Log 4
+      res.status(400).json({ message: 'Invalid credentials (Password mismatch)' });
     }
   } catch (error) {
-    console.error(error);
+    console.error("🔥 Login Error:", error);
     res.status(500).json({ message: 'Server Error' });
   }
 };
