@@ -122,7 +122,7 @@ export default function Home() {
                <div className="md:w-1/2">
                   <span className="text-green-600 font-bold tracking-widest text-sm uppercase mb-2 block">For Every Farmer</span>
                   <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
-                    No Tech Skills Needed! <br/><span className="text-green-600">Just Book Drone Spraying Service.</span>
+                    No Tech Skills Needed! <br/><span className="text-4xl md:text-5xl font-black text-green-600 mb-6 leading-tight">Just Book Drone Spraying Service.</span>
                   </h2>
                   <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                      Whether you own 2 acres or 200, manual spraying is hurting your profit. 

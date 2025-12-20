@@ -28,7 +28,7 @@ export default function PilotDashboard() {
       {/* Header */}
       <div className="bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center">
         <h1 className="font-bold text-xl flex items-center gap-2">
-          <span className="text-blue-500">Aero</span>Nex Pilot 🚁
+          <span className="text-blue-500">Drone</span>Pilot Dashboard 
         </h1>
         <div className="flex items-center gap-4">
           <span className="text-sm text-slate-400 hidden md:block">ID: {user.email}</span>
