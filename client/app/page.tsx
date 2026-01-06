@@ -58,20 +58,20 @@ export default function Home() {
            className="absolute inset-0 bg-cover bg-center opacity-60"
            style={{ backgroundImage: "url('/images/farmdrone.webp')" }}
          ></div>
-         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-900/50"></div>
+         <div className="absolute inset-0  bg-gradient-to-t from-slate-950 via-transparent to-slate-900/50"></div>
 
          <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-6 max-w-5xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-300 font-bold tracking-widest uppercase mb-8 animate-fade-in">
                <Drone size={16} /> Drone-Powered Agriculture
             </div>
-            <h1 className="text-6xl md:text-8xl font-black text-white mb-6 leading-tight drop-shadow-2xl">
-               The Future of Farming <br/>
-               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">
-                  Is Airborne.
-               </span>
+            <h1 className="md:text-8xl font-black mb-6  text-transparent bg-clip-text bg-gradient-to-b from-white to-darkgreen-300 ">
+                  Connecting Farmers <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-200 to-blue-400">
+                   with Expert Drone Pilots
+              </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-200 mb-12 max-w-3xl leading-relaxed">
-               AeroNex connects India's 30 Million Farmers with 11,000+ Certified Drone Pilots. 
+               AeroNex aims to connects India's 3 Crore Farmers with 3,000+ Certified Drone Pilots in India.
                Experience precision spraying that saves 30% cost and 90% water.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 w-full justify-center">
@@ -94,20 +94,20 @@ export default function Home() {
          <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-200">
                <div className="p-4">
-                  <div className="text-4xl font-black text-blue-600 mb-2">11,000+</div>
-                  <div className="text-sm font-bold uppercase tracking-wider text-slate-500">Certified Pilots</div>
+                  <div className="text-4xl font-black text-blue-600 mb-2">3,000+</div>
+                  <div className="text-sm font-bold uppercase tracking-wider text-slate-500">Certified Pilots with Kisan Drone training in India</div>
                </div>
                <div className="p-4">
-                  <div className="text-4xl font-black text-green-600 mb-2">30M</div>
-                  <div className="text-sm font-bold uppercase tracking-wider text-slate-500">Farmers Reached</div>
+                  <div className="text-4xl font-black text-green-600 mb-2">3 Crore</div>
+                  <div className="text-sm font-bold uppercase tracking-wider text-slate-500">Farmers Demand Drone Services</div>
                </div>
                <div className="p-4">
                   <div className="text-4xl font-black text-orange-600 mb-2">₹600</div>
                   <div className="text-sm font-bold uppercase tracking-wider text-slate-500">Avg Cost / Acre</div>
                </div>
                <div className="p-4">
-                  <div className="text-4xl font-black text-purple-600 mb-2">20 min</div>
-                  <div className="text-sm font-bold uppercase tracking-wider text-slate-500">Speed / 10 Acres</div>
+                  <div className="text-4xl font-black text-purple-600 mb-2">10-20 min</div>
+                  <div className="text-sm font-bold uppercase tracking-wider text-slate-500">Speed / 10 Acres <br></br>(Depends upon wind and drone model)</div>
                </div>
             </div>
          </div>
