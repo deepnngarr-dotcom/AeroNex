@@ -50,7 +50,7 @@ export default function Home() {
     <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-blue-100">
       
       {/* -----------------------------------------------------
-          SECTION 1: HERO SLIDER (High Impact Visuals)
+          SECTION 1: HERO SLIDER
       ----------------------------------------------------- */}
       <div className="relative w-full h-[85vh] overflow-hidden bg-slate-900">
          {/* Background Image */}
@@ -88,7 +88,7 @@ export default function Home() {
       </div>
 
       {/* -----------------------------------------------------
-          SECTION 2: REAL WORLD IMPACT (The Numbers)
+          SECTION 2: REAL WORLD IMPACT (The Numbers
       ----------------------------------------------------- */}
       <div className="bg-slate-50 py-20 border-b border-slate-200">
          <div className="max-w-7xl mx-auto px-6">
@@ -114,12 +114,12 @@ export default function Home() {
       </div>
 
       {/* -----------------------------------------------------
-          SECTION 3: FOR FARMERS (Simplified)
+          SECTION 3: FOR FARMERS (value proposition)
       ----------------------------------------------------- */}
       <div className="py-32 bg-white">
          <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row gap-16 items-center mb-24">
-               <div className="md:w-1/2">
+                <div className="md:w-1/2">
                   <span className="text-green-600 font-bold tracking-widest text-sm uppercase mb-2 block">For Every Farmer</span>
                   <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
                     No Tech Skills Needed! <br/><span className="text-4xl md:text-5xl font-black text-green-600 mb-6 leading-tight">Just Book Drone Spraying Service.</span>
@@ -129,21 +129,21 @@ export default function Home() {
                      Labor is expensive and hard to find. Drones are ready instantly.
                   </p>
                   
-                  <div className="space-y-6">
+                <div className="space-y-6">
                      <div className="flex items-start gap-4 p-4 bg-green-50 rounded-xl border border-green-100">
                         <Droplets className="text-green-600 shrink-0" size={28}/>
-                        <div>
+                     <div>
                            <h4 className="font-bold text-lg">Save Expensive Chemicals</h4>
                            <p className="text-slate-600 text-sm">ULV technology uses microscopic droplets that stick to plants, stopping wastage.</p>
-                        </div>
+                      </div>
                      </div>
                      <div className="flex items-start gap-4 p-4 bg-green-50 rounded-xl border border-green-100">
                         <Clock className="text-green-600 shrink-0" size={28}/>
                         <div>
                            <h4 className="font-bold text-lg">Beat the Weather</h4>
                            <p className="text-slate-600 text-sm">Finish spraying before the rains come. A drone covers 25 acres/day compared to 2 acres manually.</p>
-                        </div>
-                     </div>
+                         </div>
+                      </div>
                   </div>
                </div>
                <div className="md:w-1/2 relative">
@@ -161,8 +161,8 @@ export default function Home() {
                      </div>
                      <p className="text-xs text-slate-500">"I saved ₹15,000 on labor this season using AeroNex." - Ram Singh, Bhatona</p>
                   </div>
-               </div>
-            </div>
+                 </div>
+              </div>
          </div>
       </div>
 
