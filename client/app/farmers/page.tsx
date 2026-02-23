@@ -76,7 +76,12 @@ export default function ForFarmers() {
   return (
     <div className="min-h-screen bg-white text-slate-900">
       {/* Hero Section */}
-      <div className="relative pt-20 pb-32 overflow-hidden bg-gradient-to-b from-green-50 to-white">
+      <div className="relative pt-24 pb-20 overflow-hidden">
+        {/* Background Image */}
+         <div 
+           className="absolute inset-0 bg-cover bg-center opacity-100"
+           style={{ backgroundImage: "" }}
+         ></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-green-200/40 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-yellow-200/40 rounded-full blur-[100px] pointer-events-none"></div>
 
@@ -85,15 +90,21 @@ export default function ForFarmers() {
             <Sprout size={14} /> Smart Farming Revolution
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight text-slate-900">
+          <h1 className="text-5xl md:text-5xl font-black mb-6 leading-tight text-slate-800 text-shadow-lg">
             Better Harvest, <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-800">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">
               Less Effort.
             </span>
           </h1>
-          
-          <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed font-medium">
-            Stop spraying manually. Book a certified drone pilot to spray 
+         
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-4 leading-relaxed ">
+            Affordable drone spraying services for farmers of all sizes. Whether you have 5 acres or 500, we've got you covered.
+           
+          </p>
+          {/*} Increase yield, reduce chemical use, and save time. Stop spraying manually. */}
+
+          <p className="text-xl text-green-700 max-w-2xl mx-auto mb-10 leading-relaxed font-medium  ">
+            Book a certified drone pilot to spray 
             your fields in minutes. Save 30% on chemicals.
           </p>
 
@@ -102,7 +113,7 @@ export default function ForFarmers() {
               {buttonText} <ArrowRight size={20}/>
             </Link>
           </div>
-          <p className="mt-4 text-sm text-slate-500">No smartphone experience needed • Pay after service</p>
+          <p className="mt-4 text-sm text-slate-500">No drone experience needed • Pay after service</p>
         </div>
       </div>
 
@@ -137,6 +148,7 @@ export default function ForFarmers() {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }

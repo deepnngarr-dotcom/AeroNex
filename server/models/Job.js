@@ -8,13 +8,13 @@ const jobSchema = new mongoose.Schema({
     required: true
   },
   
-  // === THE MISSING LINK ===
+ 
   assignedPilot: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     default: null
   },
-  // =======================
+
 
   cropType: { type: String, required: true },
   areaAcres: { type: Number, required: true },

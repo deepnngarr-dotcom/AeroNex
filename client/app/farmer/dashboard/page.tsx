@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 
 export default function FarmerDashboard() {
-  const { user } = useAuth();
+  const { user , logout} = useAuth();
   const router = useRouter();
   const [jobs, setJobs] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -23,7 +23,7 @@ export default function FarmerDashboard() {
     areaAcres: '',
     budget: '',
     address: '',
-    scheduledDate: '', // <--- New State
+    scheduledDate: '', 
     hasVehicleAccess: false
   });
   const [submitting, setSubmitting] = useState(false);
@@ -107,9 +107,15 @@ export default function FarmerDashboard() {
                 <span className="font-bold text-slate-700">Uttar Pradesh, IN</span>
              </div>
           </div>
+          <div className="flex items-center gap-4">
+          <span className="text-sm text-slate-400 hidden md:block">ID: {user.email}</span>
+          <button onClick={logout} className="text-xs bg-red-900/30 text-red-400 px-3 py-1 rounded hover:bg-red-900/50 border border-red-900">
+            Logout
+          </button>
+          </div>
         </div>
       </div>
-
+      
       <div className="max-w-[1600px] mx-auto px-6 py-8">
         
         {/* 2. STATISTICS ROW */}
@@ -146,7 +152,7 @@ export default function FarmerDashboard() {
         {/* 3. MAIN DASHBOARD GRID */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
            
-           {/* === LEFT COLUMN: THE BIG BOOKING FORM === */}
+           {/* === LEFT COLUMN: THE SPRAY REQUEST BOOKING FORM === */}
            <div className="lg:col-span-1">
               <div className="bg-white rounded-2xl shadow-lg border border-green-100 overflow-hidden sticky top-36">
                  <div className="bg-green-600 p-6 text-white">
@@ -171,7 +177,7 @@ export default function FarmerDashboard() {
                        />
                     </div>
 
-                    {/* Schedule Date (NEW) */}
+                    {/* Schedule Date */}
                     <div>
                        <label className="block text-sm font-bold text-slate-700 mb-2">Schedule Date</label>
                        <input 
@@ -295,6 +301,7 @@ export default function FarmerDashboard() {
                                 </div>
                              </div>
 
+                            
                              {/* Status & Pilot Info */}
                              <div className="text-right">
                                 <div className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide mb-2

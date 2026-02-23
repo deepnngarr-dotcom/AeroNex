@@ -15,14 +15,12 @@ import {
 export default function Home() {
   const { user } = useAuth();
 
-  // =========================================================
-  // LOGGED IN STATE (Keep existing personalized dashboards)
-  // =========================================================
+  {/*} =========================================
+       LOGGED IN STATE FOR PILOTS AND FARMERS      
+   =========================================*/}
   if (user?.role === 'pilot') {
-     // ... (Previous Pilot Dashboard Code - Hidden for brevity, focusing on Guest Page)
-     // For this response, I will just redirect or show a simple link to keep the file size manageable
-     // but in your actual file, you can keep the previous Pilot logic here.
-     return (
+     
+      return (
         <div className="min-h-screen bg-slate-950 text-white flex items-center justify-center">
            <div className="text-center">
               <h1 className="text-4xl font-bold mb-4">Welcome Back, Captain {user.name}</h1>
@@ -33,7 +31,8 @@ export default function Home() {
   }
 
   if (user?.role === 'farmer') {
-     return (
+    
+      return (
         <div className="min-h-screen bg-green-50 text-slate-900 flex items-center justify-center">
            <div className="text-center">
               <h1 className="text-4xl font-bold mb-4">Namaste, {user.name}</h1>
@@ -43,15 +42,15 @@ export default function Home() {
      );
   }
 
-  // =========================================================
-  // GUEST STATE: THE MASSIVE LANDING PAGE
-  // =========================================================
+  {/* =========================================================
+                GUEST STATE: THE LANDING PAGE
+  =========================================================  */}
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-blue-100">
       
-      {/* -----------------------------------------------------
+      {/* -------------------------------
           SECTION 1: HERO SLIDER
-      ----------------------------------------------------- */}
+      ----------------------------- */}
       <div className="relative w-full h-[85vh] overflow-hidden bg-slate-900">
          {/* Background Image */}
          <div 
@@ -88,7 +87,7 @@ export default function Home() {
       </div>
 
       {/* -----------------------------------------------------
-          SECTION 2: REAL WORLD IMPACT (The Numbers
+          SECTION 2: REAL WORLD IMPACT (The Numbers)
       ----------------------------------------------------- */}
       <div className="bg-slate-50 py-20 border-b border-slate-200">
          <div className="max-w-7xl mx-auto px-6">
@@ -113,9 +112,9 @@ export default function Home() {
          </div>
       </div>
 
-      {/* -----------------------------------------------------
-          SECTION 3: FOR FARMERS (value proposition)
-      ----------------------------------------------------- */}
+      {/* ---------------------------
+          SECTION 3: FOR FARMERS
+      ------------------------------- */}
       <div className="py-32 bg-white">
          <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row gap-16 items-center mb-24">
@@ -167,7 +166,7 @@ export default function Home() {
       </div>
 
       {/* -----------------------------------------------------
-          SECTION 4: BIG VISUAL BREAK (The Technology)
+          SECTION 4: The Technology
       ----------------------------------------------------- */}
       <div className="w-full h-[600px] relative bg-fixed bg-center bg-cover" style={{backgroundImage: "url('/images/spray.webp')"}}>
          <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
@@ -196,7 +195,7 @@ export default function Home() {
       </div>
 
       {/* -----------------------------------------------------
-          SECTION 5: OPERATIONAL TRANSPARENCY (The Process)
+          SECTION 5: OPERATIONAL TRANSPARENCY 
       ----------------------------------------------------- */}
       <div className="py-32 bg-slate-50 ">
          <div className="max-w-7xl mx-auto px-6">
@@ -248,12 +247,20 @@ export default function Home() {
                   <h4 className="font-bold text-slate-900 mb-2">Pay</h4>
                   <p className="text-xs text-slate-500">Job complete. Balance deducted from farmer, credited to Pilot Wallet.</p>
                </div>
+               {/* End of Process  */}
             </div>
          </div>
       </div>
 
+      <div className="relative pt-159 pb-32 overflow-hidden">
+         {/* Background Image */}
+         <div 
+           className="absolute inset-0 bg-cover bg-center opacity-100"
+           style={{ backgroundImage: "url('/images/spray_booking.webp')" }}
+         ></div>
+      </div>
       {/* -----------------------------------------------------
-          SECTION 6: FOR PILOTS (The Career Path)
+          SECTION 6: FOR DRONE PILOTS (The Career Path)
       ----------------------------------------------------- */}
       <div className="py-32 bg-slate-900 text-white">
          <div className="max-w-7xl mx-auto px-6">
@@ -312,7 +319,7 @@ export default function Home() {
                   </p>
                   <div className="flex gap-4">
                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/1200px-Emblem_of_India.svg.png" className="h-10 opacity-50 grayscale hover:grayscale-0 transition"/>
-                     {/* Placeholder for Digital Sky Logo */}
+                     
                      <div className="h-10 w-24 bg-slate-100 rounded flex items-center justify-center text-xs font-bold text-slate-400 border border-slate-200">Digital Sky</div>
                   </div>
                </div>

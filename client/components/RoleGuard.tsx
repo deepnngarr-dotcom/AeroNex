@@ -23,7 +23,7 @@ export default function RoleGuard({
         return;
       }
 
-      // 2. If logged in but WRONG role, go to THEIR dashboard
+      // 2. If logged in but wrong role, redirect to their dashboard
       if (user.role !== allowedRole) {
         if (user.role === 'pilot') router.push('/pilot/dashboard');
         else router.push('/farmer/dashboard');

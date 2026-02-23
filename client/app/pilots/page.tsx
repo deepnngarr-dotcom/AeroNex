@@ -81,6 +81,11 @@ export default function ForPilots() {
       
       {/* Hero Section */}
       <div className="relative pt-20 pb-32 overflow-hidden">
+        {/* Background image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20" 
+          style={{ backgroundImage: "url('/images/drone_storage.webp')" }}
+        ></div>
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none"></div>
 

@@ -8,8 +8,7 @@ const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
 };
 
-// @desc    Register new user
-// @route   POST /api/auth/register
+
 const registerUser = async (req, res) => {
   try {
     const { name, email, password, role } = req.body;
@@ -48,8 +47,7 @@ const registerUser = async (req, res) => {
   }
 };
 
-// @desc    Authenticate a user
-// @route   POST /api/auth/login
+
 const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -86,8 +84,7 @@ const loginUser = async (req, res) => {
   }
 };
 
-// @desc    Get user data
-// @route   GET /api/auth/me
+
 const getMe = async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select('-password');

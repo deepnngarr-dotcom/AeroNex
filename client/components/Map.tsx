@@ -27,7 +27,7 @@ const jobIcon = L.icon({
   shadowSize: [41, 41]
 });
 
-// --- NEW: Map Controller to handle Zoom Animations ---
+// Map Controller to handle Zoom Animations ---
 function MapController({ center, zoom }: { center: [number, number], zoom: number }) {
   const map = useMap();
   useEffect(() => {
@@ -36,8 +36,8 @@ function MapController({ center, zoom }: { center: [number, number], zoom: numbe
   return null;
 }
 
-// --- MAIN COMPONENT ---
-// Added "zoomTrigger" prop to listen for button clicks
+// --- MAIN COMPONENT
+
 export default function Map({ zoomTrigger }: { zoomTrigger?: number }) {
   const [position, setPosition] = useState<[number, number] | null>(null);
   const [jobs, setJobs] = useState<any[]>([]);
