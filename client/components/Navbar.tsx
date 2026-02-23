@@ -31,12 +31,12 @@ export default function Navbar() {
           </Link>
 
           <Link href="/pilots" className="hover:text-red-500 transition flex items-center gap-2 group">
-            For Pilots
+            Pilots
             <span className="bg-red-600 text-white text-[10px] px-1 rounded hidden group-hover:block">NEW</span>
           </Link>
 
           <Link href="/farmers" className="hover:text-green-500 transition flex items-center gap-2">
-            For Farmers
+            Farmers
           
           </Link>
 

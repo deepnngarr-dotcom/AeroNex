@@ -90,7 +90,7 @@ export default function ForFarmers() {
             <Sprout size={14} /> Smart Farming Revolution
           </div>
           
-          <h1 className="text-5xl md:text-5xl font-black mb-6 leading-tight text-slate-800 text-shadow-lg">
+          <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight text-slate-800 text-shadow-lg">
             Better Harvest, <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">
               Less Effort.
